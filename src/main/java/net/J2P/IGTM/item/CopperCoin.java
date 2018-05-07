@@ -3,9 +3,7 @@ package net.J2P.IGTM.item;
 import net.J2P.IGTM.block.Exchanger;
 import net.J2P.IGTM.core.CoinItemBase;
 import net.minecraft.block.Block;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
@@ -35,7 +33,7 @@ public class CopperCoin extends CoinItemBase {
                     // Si le joueur a suffisement de pièce, on fait l'échange
                     if (nbCoins >= 100){
 
-                        removeNboinsFromInventory(player, ModItems.copper_coin, 100);
+                        removeNbCoinsFromInventory(player, ModItems.copper_coin, 100);
                         player.addItemStackToInventory(new ItemStack(ModItems.silver_coin));
                     }
                     return EnumActionResult.SUCCESS;

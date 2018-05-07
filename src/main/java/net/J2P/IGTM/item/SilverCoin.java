@@ -36,7 +36,7 @@ public class SilverCoin extends CoinItemBase {
                     // Si le joueur a suffisement de pièce, on fait l'échange
                     if (nbCoins >= 100){
 
-                        removeNboinsFromInventory(player, ModItems.silver_coin, 100);
+                        removeNbCoinsFromInventory(player, ModItems.silver_coin, 100);
                         player.addItemStackToInventory(new ItemStack(ModItems.gold_coin));
                     }
                     return EnumActionResult.SUCCESS;

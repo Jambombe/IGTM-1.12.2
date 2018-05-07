@@ -1,0 +1,7 @@
+ - In-game commands
+ - Fix Exchange block textures
+ - On upper exchange, remove in hand ItemStack first
+ - Color text on message sent to player ?
+
+
+ - Add craftable items with coins or others ?
