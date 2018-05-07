@@ -1,0 +1,14 @@
+# Francais FR Language File for IGTM Mod
+
+# Creative Tab
+itemGroup.tab_mailbox=IGTM
+
+
+# Items Name
+item.gold_coin.name=Pièce d'or
+item.silver_coin.name=Pièce d'argent
+item.copper_coin.name=Pièce de cuivre
+
+
+# Blocks name
+tile.exchanger.json.name=Echangeur
