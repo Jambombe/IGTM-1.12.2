@@ -16,7 +16,7 @@ public class StringNames {
 
 
     // BLOCKS
-    public static final String EXCHANGER = "exchanger.json";
+    public static final String EXCHANGER = "exchanger";
 
 
     // TileEntity Owner

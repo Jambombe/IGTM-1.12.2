@@ -11,4 +11,4 @@ item.copper_coin.name=Pièce de cuivre
 
 
 # Blocks name
-tile.exchanger.json.name=Echangeur
+tile.exchanger.name=Echangeur

@@ -56,7 +56,7 @@ public class ModBlocks {
         GameRegistry.findRegistry(Item.class).register(ib);
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(b), 0, new ModelResourceLocation(new ResourceLocation(StringNames.MODID, b.getUnlocalizedName().substring(5)), "inventory"));
-
+//        ModelLoader.setCustomModelResourceLocation(ib, 0, new ModelResourceLocation(new ResourceLocation(StringNames.MODID, b.getUnlocalizedName().substring(5)), "inventory"));
 
 
 //        Item i = Item.getItemFromBlock(b);

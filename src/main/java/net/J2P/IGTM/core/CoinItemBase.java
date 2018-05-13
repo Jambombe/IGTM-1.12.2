@@ -32,14 +32,21 @@ public abstract class CoinItemBase extends Item {
             ItemStack stack = player.inventory.getStackInSlot(slot);
 
             if (stack != null && ((stack.getUnlocalizedName()).equals(new ItemStack(coinType).getUnlocalizedName()))) {
-
                 nbCoins += stack.getCount();
             }
         }
+        System.out.println(nbCoins);
         return nbCoins;
     }
 
     // Tant qu'il rest des pièce à supprimer
+
+    /**
+     * Supprime nbCoinsToRemove pièces de type coinsType de l'inventaire du joueur player
+     * @param player Player auquel supprimer les pièces
+     * @param coinsType Type de pièces à supprimer
+     * @param nbCoinsToRemove Nombre de pièces à supprimer
+     */
     public void removeNbCoinsFromInventory(EntityPlayer player, Item coinsType, int nbCoinsToRemove) {
         int numSlot = 0;
 

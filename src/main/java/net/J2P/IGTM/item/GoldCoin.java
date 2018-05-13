@@ -4,8 +4,10 @@ import net.J2P.IGTM.block.Exchanger;
 import net.J2P.IGTM.core.CoinItemBase;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
@@ -21,7 +23,10 @@ public class GoldCoin extends CoinItemBase {
         super(name);
     }
 
-
+    @Override
+    public EnumRarity getRarity(ItemStack stack) {
+        return EnumRarity.EPIC;
+    }
 
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {

@@ -51,6 +51,7 @@ public class ModItems {
     // Enregistrer la texture d'UN SEUL item
     public static void registerRender(Item i){
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(i, 0, new ModelResourceLocation(StringNames.MODID+":"+i.getUnlocalizedName().substring(5), "inventory"));
+//        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(i, 0, new ModelResourceLocation(i.getUnlocalizedName().substring(5), "inventory"));
     }
 
 }
