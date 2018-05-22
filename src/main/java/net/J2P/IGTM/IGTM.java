@@ -1,11 +1,14 @@
 package net.J2P.IGTM;
 
 import net.J2P.IGTM.block.ModBlocks;
+import net.J2P.IGTM.event.MobDropEvent;
+import net.J2P.IGTM.event.RegisteringEvent;
 import net.J2P.IGTM.item.ModItems;
 import net.J2P.IGTM.proxy.CommonProxy;
 import net.J2P.IGTM.tab.IGTMCreativeTab;
 import net.J2P.IGTM.utils.StringNames;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -16,34 +19,44 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = StringNames.MODID, version = StringNames.VERSION, name = StringNames.NAME)
 public class IGTM
 {
-    @SidedProxy(clientSide = "net.J2P.IGTM.proxy.ClientProxy", serverSide = "net.J2P.IGTM.proxy.CommonProxy")
+    @SidedProxy(clientSide = StringNames.CLIENT_PROXY, serverSide = StringNames.SERVER_PROXY)
     public static CommonProxy proxy;
 
-    @Mod.Instance
+    @Mod.Instance(StringNames.MODID)
     public static IGTM instance;
+
+    public IGTM()
+    {
+        MinecraftForge.EVENT_BUS.register(new RegisteringEvent());
+    }
 
     public static IGTMCreativeTab igtmTab;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event){
-        igtmTab = new IGTMCreativeTab(CreativeTabs.getNextID(), "tab_mailbox");
+        igtmTab = new IGTMCreativeTab(CreativeTabs.getNextID(), "tab_igtm");
 
-        ModItems.preInit();
-        ModBlocks.preInit();
+//        ModItems.preInit();
+//        ModBlocks.preInit();
 
-        proxy.preInit(event);
+        proxy.preInit();
     }
     
     @EventHandler
     public void init(FMLInitializationEvent event){
 
-        proxy.init(event);
+        proxy.init();
+
+        // Enregistrement
+        MinecraftForge.EVENT_BUS.register(new MobDropEvent());
+
+
 
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event){
 
-        proxy.postInit(event);
+        proxy.postInit();
     }
 }

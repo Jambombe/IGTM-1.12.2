@@ -8,8 +8,11 @@ public class StringNames {
     public static final String VERSION = "1.0";
     public static final String NAME = "I Got The Money";
 
-    // ITEMS
+    // PROXY
+    public static final String CLIENT_PROXY = "net.J2P.IGTM.proxy.ClientProxy";
+    public static final String SERVER_PROXY = "net.J2P.IGTM.proxy.ServerProxy";
 
+    // ITEMS
     public static final String GOLD_COIN = "gold_coin";
     public static final String SILVER_COIN = "silver_coin";
     public static final String COPPER_COIN = "copper_coin";

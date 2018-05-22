@@ -10,21 +10,23 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ClientProxy extends CommonProxy{
 
     @Override
-    public void preInit(FMLPreInitializationEvent event) {
+    public void preInit()
+    {
+        super.preInit();
 
     }
 
     @Override
-    public void init(FMLInitializationEvent event) {
-        ModItems.registerRenders();
-
-        ModelRegistryEvent e = new ModelRegistryEvent();
-        ModBlocks.registerRenders(e);
+    public void init()
+    {
+        super.init();
 
     }
 
     @Override
-    public void postInit(FMLPostInitializationEvent event) {
+    public void postInit()
+    {
+        super.postInit();
 
     }
 }
