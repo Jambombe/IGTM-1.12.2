@@ -1,7 +1,7 @@
 {
   "variants":{
     "normal":{
-      "model":"mailbox:mail_box"
+      "model":"igtm:gold_coin_ore"
     }
   }
 }

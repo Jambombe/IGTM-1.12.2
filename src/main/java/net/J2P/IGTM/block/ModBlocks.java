@@ -19,14 +19,16 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModBlocks {
 
     public static Block exchanger;
+    public static Block gold_coin_ore;
 
     static Block[] blocks;
 
     public static void init(){
 
         exchanger = new Exchanger(Material.IRON, StringNames.EXCHANGER);
+        gold_coin_ore = new GoldCoinOre(Material.ROCK, StringNames.GOLD_COIN_ORE);
 
-        blocks = new Block[]{exchanger};
+        blocks = new Block[]{exchanger, gold_coin_ore};
 
         registerBlocks();
     }

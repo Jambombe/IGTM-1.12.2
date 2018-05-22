@@ -20,6 +20,7 @@ public class StringNames {
 
     // BLOCKS
     public static final String EXCHANGER = "exchanger";
+    public static final String GOLD_COIN_ORE = "gold_coin_ore";
 
 
     // TileEntity Owner

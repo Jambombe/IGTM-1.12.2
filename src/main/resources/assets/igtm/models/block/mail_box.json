@@ -1,8 +1,0 @@
-{
-  "parent":"block/cube_bottom_top",
-  "textures":{
-    "side":"mailbox:blocks/mail_box_side",
-    "top":"mailbox:blocks/mail_box_top",
-    "bottom":"mailbox:blocks/mail_box_bottom"
-  }
-}

@@ -38,11 +38,6 @@ public class GoldCoin extends CoinItemBase {
                     ItemStack stack = player.getHeldItem(hand);
                     player.setHeldItem(hand, new ItemStack(ModItems.gold_coin, stack.getCount()-1));
 
-                    // Si le joueur n'a pas de place dans l'inventaire, les pièces sont perdues
-//                    player.inventory.addItemStackToInventory(new ItemStack(ModItems.silver_coin, 50));
-//                    player.inventory.addItemStackToInventory(new ItemStack(ModItems.silver_coin, 50));
-
-                    // Mieux ! :)
                     EntityItem items = new EntityItem(worldIn, pos.getX()+(facing.getFrontOffsetX()/2), pos.getY()+(facing.getFrontOffsetY()/2), pos.getZ()+(facing.getFrontOffsetZ()/2), new ItemStack(ModItems.silver_coin, 50));
                     EntityItem items2 = new EntityItem(worldIn, pos.getX()+(facing.getFrontOffsetX()/2), pos.getY()+(facing.getFrontOffsetY()/2), pos.getZ()+(facing.getFrontOffsetZ()/2), new ItemStack(ModItems.silver_coin, 50));
                     worldIn.spawnEntity(items);
