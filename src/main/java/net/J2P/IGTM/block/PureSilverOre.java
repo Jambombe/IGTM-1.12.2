@@ -8,6 +8,9 @@ public class PureSilverOre extends CoinOreBase {
     public PureSilverOre(Material material, String name)
     {
         super(material, name);
+        this.setResistance(15F);
+        this.setHardness(6F);
+        this.setHarvestLevel("pickaxe", 2); // 2 = IRON
     }
 
 
