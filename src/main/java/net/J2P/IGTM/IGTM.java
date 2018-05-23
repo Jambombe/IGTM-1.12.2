@@ -1,11 +1,13 @@
 package net.J2P.IGTM;
 
 import net.J2P.IGTM.block.ModBlocks;
+import net.J2P.IGTM.event.FirstJoinEvent;
 import net.J2P.IGTM.event.MobDropEvent;
 import net.J2P.IGTM.event.RegisteringEvent;
 import net.J2P.IGTM.gen.CoinOreGenerator;
 import net.J2P.IGTM.item.ModItems;
 import net.J2P.IGTM.proxy.CommonProxy;
+import net.J2P.IGTM.recipes.ModRecipes;
 import net.J2P.IGTM.tab.IGTMCreativeTab;
 import net.J2P.IGTM.utils.StringNames;
 import net.minecraft.creativetab.CreativeTabs;
@@ -38,8 +40,6 @@ public class IGTM
     public void preInit(FMLPreInitializationEvent event){
         igtmTab = new IGTMCreativeTab(CreativeTabs.getNextID(), "tab_igtm");
 
-//        ModItems.preInit();
-//        ModBlocks.preInit();
         proxy.preInit();
     }
     
@@ -48,10 +48,12 @@ public class IGTM
 
         proxy.init();
 
-        // Enregistrement
+        // Enregistrement des event
         MinecraftForge.EVENT_BUS.register(new MobDropEvent());
+        MinecraftForge.EVENT_BUS.register(new FirstJoinEvent());
 
         GameRegistry.registerWorldGenerator(new CoinOreGenerator(), 0);
+        ModRecipes.registerAllRecipes();
 
 
 

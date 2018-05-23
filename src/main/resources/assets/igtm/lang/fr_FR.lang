@@ -12,4 +12,6 @@ item.copper_coin.name=Pièce de cuivre
 
 # Blocks name
 tile.exchanger.name=Echangeur
-tile.gold_coin_ore.name=Minerai d'or pur
+tile.pure_gold_ore.name=Minerai d'or pur
+tile.pure_silver_ore.name=Minerai d'argent pur
+tile.pure_copper_ore.name=Minerai de cuivre pur

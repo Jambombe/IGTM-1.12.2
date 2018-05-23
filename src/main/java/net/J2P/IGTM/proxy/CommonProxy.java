@@ -11,10 +11,6 @@ public class CommonProxy {
     }
 
     public void init(){
-//        ModItems.registerModels();
-//
-//        ModelRegistryEvent e = new ModelRegistryEvent();
-//        ModBlocks.registerModels(e);
 
     }
 

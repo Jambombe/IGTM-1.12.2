@@ -12,4 +12,6 @@ item.copper_coin.name=Copper Coin
 
 # Blocks name
 tile.exchanger.name=Exchanger
-tile.gold_coin_ore.name=Pure Gold Ore
+tile.pure_gold_ore.name=Pure Gold Ore
+tile.pure_silver_ore.name=Pure Silver Ore
+tile.pure_copper_ore.name=Pure Copper Ore

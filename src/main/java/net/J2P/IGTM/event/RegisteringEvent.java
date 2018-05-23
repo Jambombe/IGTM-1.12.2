@@ -22,4 +22,5 @@ public class RegisteringEvent
         ModBlocks.init();
         e.getRegistry().registerAll(ModBlocks.getBlocks());
     }
+
 }

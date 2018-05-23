@@ -16,11 +16,15 @@ import java.util.Random;
 
 public class CoinOreGenerator implements IWorldGenerator {
 
-    private WorldGenerator goldCoinOreGen;
+    private WorldGenerator pureGoldOreGen;
+    private WorldGenerator pureSilverOreGen;
+    private WorldGenerator pureCopperOreGen;
 
     public CoinOreGenerator()
     {
-        goldCoinOreGen = new WorldGenMinable(ModBlocks.gold_coin_ore.getDefaultState(), 9);
+        pureGoldOreGen = new WorldGenMinable(ModBlocks.pure_gold_ore.getDefaultState(), 1);
+        pureSilverOreGen = new WorldGenMinable(ModBlocks.pure_silver_ore.getDefaultState(), 3);
+        pureCopperOreGen = new WorldGenMinable(ModBlocks.pure_copper_ore.getDefaultState(), 9);
     }
 
     @Override
@@ -29,7 +33,9 @@ public class CoinOreGenerator implements IWorldGenerator {
         switch (world.provider.getDimension())
         {
             case 0:
-                runGenerator(goldCoinOreGen, world, random, chunkX, chunkZ, 1, 80, 100);
+                runGenerator(pureCopperOreGen, world, random, chunkX, chunkZ, 10, 0, 32);
+                runGenerator(pureSilverOreGen, world, random, chunkX, chunkZ, 5, 0, 16);
+                runGenerator(pureGoldOreGen, world, random, chunkX, chunkZ, 1, 0, 11);
                 break;
         }
     }

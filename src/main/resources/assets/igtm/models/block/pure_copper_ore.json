@@ -1,6 +1,6 @@
 {
   "parent":"block/cube_all",
   "textures":{
-    "all":"igtm:blocks/gold_coin_ore"
+    "all":"igtm:blocks/pure_copper_ore"
   }
 }

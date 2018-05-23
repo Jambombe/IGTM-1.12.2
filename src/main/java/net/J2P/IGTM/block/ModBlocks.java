@@ -19,30 +19,27 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModBlocks {
 
     public static Block exchanger;
-    public static Block gold_coin_ore;
+
+    public static Block pure_gold_ore;
+    public static Block pure_silver_ore;
+    public static Block pure_copper_ore;
 
     static Block[] blocks;
 
     public static void init(){
 
         exchanger = new Exchanger(Material.IRON, StringNames.EXCHANGER);
-        gold_coin_ore = new GoldCoinOre(Material.ROCK, StringNames.GOLD_COIN_ORE);
 
-        blocks = new Block[]{exchanger, gold_coin_ore};
+        pure_gold_ore = new PureGoldOre(Material.ROCK, StringNames.PURE_GOLD_ORE);
+        pure_silver_ore = new PureSilverOre(Material.ROCK, StringNames.PURE_SILVER_ORE);
+        pure_copper_ore = new PureCopperOre(Material.ROCK, StringNames.PURE_COPPER_ORE);
 
-        registerBlocks();
-    }
 
-    public static void registerBlocks(){
-//        registerBlock(mail_box, StringNames.MAIL_BOX);
-//        blocks.forEach(block -> registerBlock(block));
-        for (Block b : blocks)
-            registerBlock(b);
-    }
+        blocks = new Block[]{exchanger,
+                                pure_gold_ore,
+                                pure_silver_ore,
+                                pure_copper_ore};
 
-    public static void registerBlock(Block b){
-        GameRegistry.findRegistry(Block.class).register(b);
-//        GameRegistry.findRegistry(Block.class).register(new ItemBlock(b));
     }
 
     // Enregistrer les textures de TOUS les blocks
