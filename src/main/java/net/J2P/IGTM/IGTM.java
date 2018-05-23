@@ -3,6 +3,7 @@ package net.J2P.IGTM;
 import net.J2P.IGTM.block.ModBlocks;
 import net.J2P.IGTM.event.MobDropEvent;
 import net.J2P.IGTM.event.RegisteringEvent;
+import net.J2P.IGTM.gen.CoinOreGenerator;
 import net.J2P.IGTM.item.ModItems;
 import net.J2P.IGTM.proxy.CommonProxy;
 import net.J2P.IGTM.tab.IGTMCreativeTab;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = StringNames.MODID, version = StringNames.VERSION, name = StringNames.NAME)
 public class IGTM
@@ -38,7 +40,6 @@ public class IGTM
 
 //        ModItems.preInit();
 //        ModBlocks.preInit();
-
         proxy.preInit();
     }
     
@@ -49,6 +50,8 @@ public class IGTM
 
         // Enregistrement
         MinecraftForge.EVENT_BUS.register(new MobDropEvent());
+
+        GameRegistry.registerWorldGenerator(new CoinOreGenerator(), 0);
 
 
 
