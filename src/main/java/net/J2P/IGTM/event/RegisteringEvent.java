@@ -4,7 +4,6 @@ import net.J2P.IGTM.block.ModBlocks;
 import net.J2P.IGTM.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -18,6 +17,8 @@ public class RegisteringEvent
         ModItems.init();
         e.getRegistry().registerAll(ModItems.getItems());
     }
+
+    /////////////////////////////////////////////////////////////////////////////
 
     // Register BLOCKs
     @SubscribeEvent
