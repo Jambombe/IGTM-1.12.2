@@ -50,19 +50,36 @@ public class ModBlocks {
             registerModel(b);
     }
 
+
     // Enregistrer la texture d'UN SEUL block
     public static void registerModel(Block b){
 
-        ItemBlock ib = new ItemBlock(b);
-        ib.setRegistryName(b.getRegistryName());
-
-        GameRegistry.findRegistry(Item.class).register(ib);
+//        ItemBlock ib = new ItemBlock(b);
+//        ib.setRegistryName(b.getRegistryName());
+//
+//        GameRegistry.findRegistry(Item.class).register(ib);
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(b), 0, new ModelResourceLocation(new ResourceLocation(StringNames.MODID, b.getUnlocalizedName().substring(5)), "inventory"));
     }
 
+    // Return le tableau de block
     public static Block[] getBlocks(){
         return blocks;
+    }
+
+    // Return le tableau d'ItemBlock à partir des Blocks
+    public static ItemBlock[] getItemBlocks()
+    {
+        ItemBlock[] ib = new ItemBlock[blocks.length];
+        for (int i = 0; i<blocks.length; i++)
+        {
+            Block b = blocks[i];
+            ItemBlock item = new ItemBlock(b);
+            item.setRegistryName(b.getRegistryName());
+            ib[i] = item;
+        }
+
+        return ib;
     }
 
 }

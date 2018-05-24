@@ -2,10 +2,6 @@ package net.J2P.IGTM.block;
 
 import net.J2P.IGTM.core.CoinOreBase;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public class PureGoldOre extends CoinOreBase {
 
@@ -18,11 +14,4 @@ public class PureGoldOre extends CoinOreBase {
 
     }
 
-//    @Override
-//    public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) {
-//        super.onBlockClicked(worldIn, pos, playerIn);
-//
-//        worldIn.spawnParticle(EnumParticleTypes.CRIT, pos.getX(), pos.getY(), pos.getZ(), 1, 1, 1);
-//
-//    }
 }

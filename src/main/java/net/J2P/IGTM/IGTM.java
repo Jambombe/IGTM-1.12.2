@@ -55,8 +55,6 @@ public class IGTM
         GameRegistry.registerWorldGenerator(new CoinOreGenerator(), 0);
         ModRecipes.registerAllRecipes();
 
-
-
     }
 
     @EventHandler

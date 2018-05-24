@@ -25,6 +25,9 @@ public class StringNames {
     public static final String PURE_SILVER_ORE = "pure_silver_ore";
     public static final String PURE_COPPER_ORE = "pure_copper_ore";
 
+    // INVENTORY
+    public static final String POUCH_INVENTORY = "pouch_inventory";
+
 
     // TileEntity Owner
 
