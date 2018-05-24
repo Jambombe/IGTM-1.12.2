@@ -22,7 +22,8 @@ public class CoinOreGenerator implements IWorldGenerator {
 
     public CoinOreGenerator()
     {
-        pureGoldOreGen = new WorldGenMinable(ModBlocks.pure_gold_ore.getDefaultState(), 1);
+        // Blockcount >= 3 sinon aucun minerai n'apparait
+        pureGoldOreGen = new WorldGenMinable(ModBlocks.pure_gold_ore.getDefaultState(), 3);
         pureSilverOreGen = new WorldGenMinable(ModBlocks.pure_silver_ore.getDefaultState(), 3);
         pureCopperOreGen = new WorldGenMinable(ModBlocks.pure_copper_ore.getDefaultState(), 9);
     }
@@ -32,15 +33,16 @@ public class CoinOreGenerator implements IWorldGenerator {
     {
         switch (world.provider.getDimension())
         {
+
             case 0:
                 runGenerator(pureCopperOreGen, world, random, chunkX, chunkZ, 10, 0, 32);
-                runGenerator(pureSilverOreGen, world, random, chunkX, chunkZ, 5, 0, 16);
+                runGenerator(pureSilverOreGen, world, random, chunkX, chunkZ, 8, 0, 16);
                 runGenerator(pureGoldOreGen, world, random, chunkX, chunkZ, 1, 0, 11);
                 break;
         }
     }
 
-    private void runGenerator(WorldGenerator gen, World world, Random rand, int chunkX, int chunkZ, int nbBlockByChunk, int minHeight, int maxHeight)
+    private void runGenerator(WorldGenerator gen, World world, Random rand, int chunkX, int chunkZ, int chance, int minHeight, int maxHeight)
     {
         if (minHeight > maxHeight || minHeight < 0 || maxHeight > 256)
         {
@@ -50,7 +52,7 @@ public class CoinOreGenerator implements IWorldGenerator {
         {
             int heightDiff = maxHeight - minHeight +1;
 
-            for (int i = 0; i < nbBlockByChunk; i++)
+            for (int i = 0; i < chance; i++)
             {
                 int x = chunkX *16 + rand.nextInt(16);
                 int y = minHeight + rand.nextInt(heightDiff);
