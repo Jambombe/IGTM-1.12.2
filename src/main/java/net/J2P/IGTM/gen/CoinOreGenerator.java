@@ -37,7 +37,12 @@ public class CoinOreGenerator implements IWorldGenerator {
             case 0:
                 runGenerator(pureCopperOreGen, world, random, chunkX, chunkZ, 10, 0, 32);
                 runGenerator(pureSilverOreGen, world, random, chunkX, chunkZ, 8, 0, 16);
-                runGenerator(pureGoldOreGen, world, random, chunkX, chunkZ, 1, 0, 11);
+//                runGenerator(pureGoldOreGen, world, random, chunkX, chunkZ, 1, 0, 11);
+                break;
+
+            case 2:
+                runGenerator(pureCopperOreGen, world, random, chunkX, chunkZ, 10, 0, 32);
+                runGenerator(pureSilverOreGen, world, random, chunkX, chunkZ, 8, 0, 16);
                 break;
         }
     }

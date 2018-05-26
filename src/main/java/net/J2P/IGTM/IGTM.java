@@ -50,7 +50,7 @@ public class IGTM
 
         // Enregistrement des event
         MinecraftForge.EVENT_BUS.register(new MobDropEvent());
-        MinecraftForge.EVENT_BUS.register(new FirstJoinEvent());
+//        MinecraftForge.EVENT_BUS.register(new FirstJoinEvent());
 
         GameRegistry.registerWorldGenerator(new CoinOreGenerator(), 0);
         ModRecipes.registerAllRecipes();
